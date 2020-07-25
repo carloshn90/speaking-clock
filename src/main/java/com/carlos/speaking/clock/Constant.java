@@ -1,4 +1,4 @@
-package com.carlos.speaking.clock.converter;
+package com.carlos.speaking.clock;
 
 import java.util.Arrays;
 import java.util.List;

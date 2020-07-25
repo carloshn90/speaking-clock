@@ -14,15 +14,15 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class TimeConverterTest {
 
-    HourConverter hourConverterMock;
-    MinuteConverter minuteConverterMock;
+    Converter<String, Optional<String>> hourConverterMock;
+    Converter<String, Optional<String>> minuteConverterMock;
     TimeConverter timeConverter;
 
     @BeforeEach
     void setUp() {
         this.hourConverterMock = mock(HourConverter.class);
         this.minuteConverterMock = mock(MinuteConverter.class);
-        this.timeConverter = new TimeConverterImpl(this.hourConverterMock, this.minuteConverterMock);
+        this.timeConverter = new TimeConverter(this.hourConverterMock, this.minuteConverterMock);
     }
 
     @Test

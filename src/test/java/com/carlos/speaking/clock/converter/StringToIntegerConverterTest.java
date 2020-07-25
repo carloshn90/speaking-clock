@@ -7,13 +7,13 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StringToIntegerConverterImplTest {
+class StringToIntegerConverterTest {
 
-    StringToIntegerConverter stringToIntegerConverter;
+    Converter<String, Optional<Integer>> stringToIntegerConverter;
 
     @BeforeEach
     void setUp() {
-        this.stringToIntegerConverter = new StringToIntegerConverterImpl();
+        this.stringToIntegerConverter = new StringToIntegerConverter();
     }
 
     @Test

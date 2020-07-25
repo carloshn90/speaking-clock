@@ -11,13 +11,13 @@ import static org.mockito.Mockito.when;
 
 class MinuteConverterTest {
 
-    StringToIntegerConverterImpl stringToIntegerConverterMock;
-    MinuteConverter minuteConverter;
+    StringToIntegerConverter stringToIntegerConverterMock;
+    Converter<String, Optional<String>> minuteConverter;
 
     @BeforeEach
     void setUp() {
-        this.stringToIntegerConverterMock = mock(StringToIntegerConverterImpl.class);
-        this.minuteConverter = new MinuteConverterImpl(this.stringToIntegerConverterMock);
+        this.stringToIntegerConverterMock = mock(StringToIntegerConverter.class);
+        this.minuteConverter = new MinuteConverter(this.stringToIntegerConverterMock);
     }
 
     @Test

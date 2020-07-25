@@ -14,13 +14,13 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class HourConverterTest {
 
-    StringToIntegerConverterImpl stringToIntegerConverterMock;
-    HourConverter hourConverter;
+    StringToIntegerConverter stringToIntegerConverterMock;
+    Converter<String, Optional<String>> hourConverter;
 
     @BeforeEach
     void setUp() {
-        this.stringToIntegerConverterMock = mock(StringToIntegerConverterImpl.class);
-        this.hourConverter = new HourConverterImpl(this.stringToIntegerConverterMock);
+        this.stringToIntegerConverterMock = mock(StringToIntegerConverter.class);
+        this.hourConverter = new HourConverter(this.stringToIntegerConverterMock);
     }
 
     @Test
