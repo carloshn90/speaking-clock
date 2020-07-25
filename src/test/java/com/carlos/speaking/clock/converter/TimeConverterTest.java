@@ -16,7 +16,7 @@ class TimeConverterTest {
 
     Converter<String, Optional<String>> hourConverterMock;
     Converter<String, Optional<String>> minuteConverterMock;
-    TimeConverter timeConverter;
+    Converter<String, String> timeConverter;
 
     @BeforeEach
     void setUp() {

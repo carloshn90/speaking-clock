@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.Optional;
 
 @RequiredArgsConstructor
-public class TimeConverter {
+public class TimeConverter implements Converter<String, String> {
 
     private final Converter<String, Optional<String>> hourConverter;
     private final Converter<String, Optional<String>> minuteConverter;
